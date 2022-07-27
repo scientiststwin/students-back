@@ -3,7 +3,7 @@ import { Document } from 'mongoose';
 
 export type StudentDocument = Student & Document;
 
-@Schema({ timestamps: true })
+@Schema({ timestamps: true, collection: 'students' })
 export class Student {
   @Prop({ type: Number, required: true, default: null })
   id: string;
